@@ -21,3 +21,26 @@ const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lower = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "1234567890";
 const special = "!@#$%^&*_+-=?";
+
+
+//Menu display
+function menuDisplay() {
+    console.log(`
+CLI Password Generator Application
+
+Usage:
+  keygen [options]
+
+Options:
+  --help          Show help message
+  --length         Set password length 
+  --numbers        Include numbers
+  --upper          Include uppercase letters
+  --special        Include special characters
+
+  Example use:
+    node keygen.js --length 10 --special
+
+
+`);
+}
