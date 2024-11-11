@@ -71,3 +71,26 @@ while (i < args.length) {
   }
   i++;
 }
+
+
+//Generate the password
+function passwordGeneration(length, usenumbers, useupper, usespecial) {
+  
+  if (usenumbers) characters += numbers;
+  if (useupper) characters += upper;
+  if (usespecial) characters += special;
+
+  // Build the password one character at a time
+  let passwordResult = "";
+  for (let i = 0; i <= length; i++) {
+    const randomizer = Math.floor(Math.random() * characters.length);
+    passwordResult += characters[randomizer];
+  }
+  return  passwordResult;
+}
+
+
+
+//Display generated password
+const passwordResult = passwordGeneration(length, usenumbers, useupper, usespecial);
+console.log(`Password result: ${passwordResult}`);
