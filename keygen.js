@@ -44,3 +44,30 @@ Options:
 
 `);
 }
+
+//Menu functionality
+let i = 0;
+while (i < args.length) {
+  const arg = args[i];
+  switch (arg) {
+    case "--help":
+      menuDisplay();
+      break;
+    case "--length":
+      length = parseInt(args[++i], 10);
+      break;
+    case "--numbers":
+      usenumbers = true;
+      break;
+    case "--upper":
+      useupper = true;
+      break;
+    case "--special":
+      usespecial = true;
+      break;
+    default:
+        console.error(`Unknown arugment: ${args[i]}`);
+        menuDisplay();
+  }
+  i++;
+}
